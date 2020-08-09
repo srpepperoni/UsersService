@@ -18,5 +18,5 @@ public class UsersController {
     public String greeting2(@PathVariable("name") String name) {
         return String.format(template, name) ;		
     }
-
+	
 }
