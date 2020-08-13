@@ -22,7 +22,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "roles", uniqueConstraints = { 
+@Table(name = "users", uniqueConstraints = { 
 		@UniqueConstraint(columnNames = "username"),
 		@UniqueConstraint(columnNames = "email") 
 	})
