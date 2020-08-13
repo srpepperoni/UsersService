@@ -26,7 +26,7 @@ public class RoleServiceImpl implements RoleService{
 	@Override
 	public String getRoleById(Integer id) {
 		Optional<Role> role = repository.findById(Long.valueOf(id));
-		return role.orElse(null) != null ? role.orElse(null).getName() : null;
+		return role.toString();
 	}
 
 }
