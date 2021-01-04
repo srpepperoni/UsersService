@@ -1,0 +1,27 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: users-service
+  datasource:
+    url: jdbc:mysql://localhost:3307/users-service-db
+    username: admin
+    password: admin
+    driver:
+      class: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL57Dialect # The SQL dialect makes Hibernate generate better SQL for the chosen database
+    ddl-auto: create # Hibernate ddl auto (create, create-drop, validate, update)
+
+# App Properties
+bezkoder:
+  app:
+    jwtSecret: bezKoderSecretKey
+    jwtExpirationMs: 86400000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

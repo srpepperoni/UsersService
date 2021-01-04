@@ -11,7 +11,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: prueba
+      MYSQL_DATABASE: users-service-db
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     ports:
@@ -40,7 +40,7 @@ INSERT INTO roles (id, NAME) VALUES (NULL, "platinum");
 INSERT INTO roles (id, NAME) VALUES (NULL, "guest");
 
 -- SQL para usuarios
-CREATE TABLE `prueba`.`users` (
+CREATE TABLE `users-service-db`.`users` (
     id int NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     lastname varchar(255) NOT NULL,
